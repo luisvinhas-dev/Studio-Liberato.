@@ -1,0 +1,39 @@
+body {
+    background-color: #000000;
+}
+
+p {
+    color: rgb(255, 255, 255);
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+}
+
+h2{
+    color: rgb(0, 102, 255);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.sobre-conteudo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.sobre-conteudo img {
+    width: 500px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .sobre-conteudo {
+        flex-direction: column;
+    }
+
+    .sobre-conteudo img {
+        width: 100%;
+    }
+}
+
+nav {
+    color:black;
+}
