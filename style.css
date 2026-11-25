@@ -1,0 +1,557 @@
+
+
+:root {
+
+    --azul-escuro: #07182e;
+
+    --azul: #1261ad;
+
+    --azul-claro: #268bea;
+
+    --fundo: #f3f6fa;
+
+    --branco: #ffffff;
+
+    --texto: #26364a;
+
+    --cinza: #718096;
+
+}
+ 
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+ 
+html {
+
+    scroll-behavior: smooth;
+
+    scroll-padding-top: 100px;
+
+}
+ 
+body {
+
+    background-color: var(--fundo) !important;
+
+    color: var(--texto);
+
+    font-family: 'Segoe UI', Arial, sans-serif;
+
+    overflow-x: hidden;
+
+}
+ 
+/* NAVBAR */
+ 
+.navbar {
+
+    background-color: var(--branco) !important;
+
+    padding: 12px 5%;
+
+    box-shadow: 0 3px 18px rgba(7, 24, 46, 0.08);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+}
+ 
+.navbar-brand {
+
+    color: var(--azul-escuro) !important;
+
+    font-size: 27px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+}
+ 
+.navbar-brand img {
+
+    object-fit: contain;
+
+}
+ 
+.navbar-nav {
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+}
+ 
+.navbar-nav .nav-link {
+
+    color: var(--texto) !important;
+
+    font-weight: 600;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+
+    white-space: nowrap;
+
+    position: relative;
+
+}
+ 
+.navbar-nav .nav-link:hover {
+
+    color: var(--azul-claro) !important;
+
+}
+ 
+.navbar-nav .nav-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+
+    height: 2px;
+
+    background-color: var(--azul-claro);
+
+    bottom: 3px;
+
+    left: 12px;
+
+    transition: 0.3s;
+
+}
+ 
+.navbar-nav .nav-link:hover::after {
+
+    width: calc(100% - 24px);
+
+}
+ 
+/* CONTEÚDO PRINCIPAL */
+ 
+main.container {
+
+    max-width: 1250px;
+
+}
+ 
+/* TÍTULOS */
+ 
+h2 {
+
+    color: var(--azul-escuro) !important;
+
+    font-size: 32px;
+
+    font-weight: 800;
+
+    margin-bottom: 30px !important;
+
+}
+ 
+h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 60px;
+
+    height: 4px;
+
+    background: var(--azul-claro);
+
+    border-radius: 10px;
+
+    margin: 12px auto 0;
+
+}
+ 
+h5 {
+
+    color: var(--azul-escuro);
+
+    font-weight: 750;
+
+}
+ 
+/* CARDS */
+ 
+.card {
+
+    border: none !important;
+
+    border-radius: 16px !important;
+
+    overflow: hidden;
+
+    background-color: var(--branco);
+
+    box-shadow: 0 5px 20px rgba(7, 24, 46, 0.07);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    height: 100%;
+
+}
+ 
+.card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow: 0 12px 28px rgba(7, 24, 46, 0.13);
+
+}
+ 
+.card-img-top {
+
+    width: 100%;
+
+    height: 260px !important;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+ 
+.card-body {
+
+    padding: 24px;
+
+}
+ 
+.card-title {
+
+    font-size: 21px;
+
+    font-weight: 800;
+
+    color: var(--azul-escuro);
+
+    margin-bottom: 13px;
+
+}
+ 
+.card-text {
+
+    color: var(--cinza);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+ 
+/* EQUIPE E CRIADORES */
+ 
+.contains-inline {
+
+    margin-top: 55px;
+
+}
+ 
+.contains-inline .card {
+
+    margin-bottom: 15px;
+
+}
+ 
+.contains-inline .card img {
+
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
+
+}
+ 
+.contains-inline .card-title {
+
+    font-size: 20px;
+
+}
+ 
+/* PLANOS */
+ 
+.contains-inline .card-body {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+ 
+.contains-inline .card:hover {
+
+    border-bottom: 3px solid var(--azul-claro) !important;
+
+}
+ 
+/* ACORDEÃO */
+ 
+.accordion {
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 18px rgba(7, 24, 46, 0.06);
+
+}
+ 
+.accordion-item {
+
+    border: none !important;
+
+    border-bottom: 1px solid #e5eaf1 !important;
+
+}
+ 
+.accordion-button {
+
+    background-color: var(--branco);
+
+    color: var(--azul-escuro);
+
+    font-weight: 700;
+
+    padding: 20px;
+
+}
+ 
+.accordion-button:not(.collapsed) {
+
+    background-color: var(--azul-escuro);
+
+    color: var(--branco);
+
+    box-shadow: none;
+
+}
+ 
+.accordion-button:focus {
+
+    box-shadow: none;
+
+}
+ 
+.accordion-body {
+
+    color: var(--cinza);
+
+    line-height: 1.8;
+
+    padding: 25px;
+
+}
+ 
+/* CONTATO E LOCALIZAÇÃO */
+ 
+#contato,
+
+#localização {
+
+    background-color: var(--branco) !important;
+
+    border-radius: 16px !important;
+
+    padding: 35px !important;
+
+    box-shadow: 0 5px 20px rgba(7, 24, 46, 0.07);
+
+}
+ 
+#contato p {
+
+    color: var(--cinza);
+
+    margin: 12px 0;
+
+    font-size: 16px;
+
+}
+ 
+#contato strong {
+
+    color: var(--azul-escuro);
+
+}
+ 
+#localização iframe {
+
+    border-radius: 12px;
+
+    margin-top: 15px;
+
+}
+ 
+/* RODAPÉ */
+ 
+footer {
+
+    background-color: var(--azul-escuro) !important;
+
+    color: var(--branco) !important;
+
+    padding: 28px !important;
+
+    margin-top: 60px;
+
+}
+ 
+footer p {
+
+    color: #d5e5f7;
+
+    font-size: 14px;
+
+    letter-spacing: 0.5px;
+
+}
+ 
+/* BOTÃO VOLTAR AO TOPO */
+ 
+#btnTopo {
+
+    display: none;
+
+    position: fixed;
+
+    bottom: 25px;
+
+    right: 25px;
+
+    width: 48px;
+
+    height: 48px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: var(--azul);
+
+    color: white;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(7, 24, 46, 0.25);
+
+    transition: 0.3s;
+
+    z-index: 999;
+
+}
+ 
+#btnTopo:hover {
+
+    background-color: var(--azul-claro);
+
+    transform: translateY(-4px);
+
+}
+ 
+/* RESPONSIVIDADE */
+ 
+@media (max-width: 991px) {
+
+    .navbar-nav {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 5px;
+
+        padding: 15px 0;
+
+    }
+ 
+    .navbar-nav .nav-link {
+
+        padding: 10px;
+
+    }
+ 
+    .navbar-brand {
+
+        font-size: 22px;
+
+    }
+
+}
+ 
+@media (max-width: 768px) {
+
+    h2 {
+
+        font-size: 26px;
+
+    }
+ 
+    .card-img-top {
+
+        height: 220px !important;
+
+    }
+ 
+    .card-body {
+
+        padding: 20px;
+
+    }
+ 
+    #contato,
+
+    #localização {
+
+        padding: 22px !important;
+
+    }
+ 
+    #localização iframe {
+
+        height: 300px;
+
+    }
+ 
+    #btnTopo {
+
+        width: 43px;
+
+        height: 43px;
+
+        right: 15px;
+
+        bottom: 15px;
+
+    }
+
+}
+
+ 
